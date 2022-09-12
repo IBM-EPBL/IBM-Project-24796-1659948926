@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,29 @@
     <script src="./script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="main_form">
-        <form onsubmit="displayMessage()">
-            <div><label for="name">Name</label></div>
+        <form onsubmit="displayMessage()" class="flex-container">
+            <div class="flex-item">
+                <label for="name">Name</label>
+                <label for="email">E-mail</label>
+                <label for="mobile">Mobile</label>
+                <label for="city">City</label>
+                <label for="state">State</label>
+                <label for="country">Country</label>
+            </div>
+            <div class="flex-item">
+                <input type="text" name="name" id="name">
+                <input type="email" name="email" id="email">
+                <input type="tel" name="mobile" id="mobile">
+                <input type="text" name="city" id="city">
+                <input type="text" name="state" id="state">
+                <input type="text" name="country" id="country">
+            </div>
+            <input type="submit" value="Submit">
         </form>
     </div>
 </body>
+
 </html>
