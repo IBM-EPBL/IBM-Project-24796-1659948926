@@ -2,6 +2,7 @@ body{
     background-image: linear-gradient(to bottom right,#31087B,#FA2FB5);
     background-attachment: fixed;
     font-size: 20px;
+    color: white;
 }
 
 .main_form{
@@ -9,52 +10,16 @@ body{
 }
 
 
-   input[type=text], select {
+input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 15px;
+  border-style: none;
   box-sizing: border-box;
 }
-input[type=email], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-        input[type=tel], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-        input[type=city], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+
 
 input[type=submit]:hover {
   background-color: #45a049;
@@ -62,6 +27,5 @@ input[type=submit]:hover {
 
 div {
   border-radius: 5px;
-  background-color: #f2f2f2;
   padding: 20px;
 }
