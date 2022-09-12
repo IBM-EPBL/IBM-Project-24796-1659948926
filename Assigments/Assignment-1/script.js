@@ -1,3 +1,3 @@
 function displayMessage() {
-    console.log("Your form has been succesfully submitted!");
+    window.alert("Your form has been succesfully submitted!");
 }
