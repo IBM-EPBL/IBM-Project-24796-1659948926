@@ -5,6 +5,16 @@ body{
     color: white;
 }
 
+.main_form {
+  border: 1px solid;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  margin:auto;
+  margin-top: 2cm;
+  width: fit-content;
+}
+
 input {
   width: 300px;
   padding: 12px 20px;
