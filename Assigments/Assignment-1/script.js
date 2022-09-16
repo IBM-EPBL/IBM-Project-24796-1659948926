@@ -1,3 +1,3 @@
 function displayMessage() {
-    window.alert("Your form has been succesfully submitted!");
+    window.alert("Your user creation form has been succesfully submitted!");
 }
