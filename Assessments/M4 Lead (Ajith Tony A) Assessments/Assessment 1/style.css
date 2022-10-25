@@ -70,3 +70,11 @@ label {
   text-align: center;
   width: 150px;
 }
+
+.flex-container > div > div{
+  width: 20rem;
+  margin: auto;
+  text-align: center;
+  border: solid 1px white;
+  border-radius: 15px;
+}

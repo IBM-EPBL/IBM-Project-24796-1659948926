@@ -7,11 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assignment 1</title>
   <script src="./script.js"></script>
+  <script>
+    const sendDetails = () => {
+      let name = document.getElementById('name').value;
+      let email = document.getElementById('email').value;
+      let mobile = document.getElementById('mobile').value;
+      localStorage.setItem('name', name);
+      localStorage.setItem('email', email);
+      localStorage.setItem('mobile', mobile);
+    }
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div>
-    <form onsubmit="displayMessage()" class="main_form">
+    <form onsubmit="sendDetails()" class="main_form" method="post"
+      action="/Assessments/M4 Lead (Ajith Tony A) Assessments/Assessment 1/verification.html">
       <div class="flex-container">
         <div>
           <label for="name">Name</label>
@@ -42,6 +54,9 @@
       </div>
     </form>
   </div>
+  <script>
+
+  </script>
 </body>
 
 </html>
