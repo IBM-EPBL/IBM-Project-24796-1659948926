@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 1</title>
+  <script src="./script.js"></script>
+  <script>
+    const sendDetails = () => {
+      let name = document.getElementById('name').value;
+      let email = document.getElementById('email').value;
+      let mobile = document.getElementById('mobile').value;
+      localStorage.setItem('name', name);
+      localStorage.setItem('email', email);
+      localStorage.setItem('mobile', mobile);
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div>
+    <form onsubmit="sendDetails()" class="main_form" method="post"
+      action="/Assessments/M4 Lead (Ajith Tony A) Assessments/Assessment 1/verification.html">
+      <div class="flex-container">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name">
+        </div>
+        <div>
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email">
+        </div>
+        <div>
+          <label for="mobile">Mobile</label>
+          <input type="tel" name="mobile" id="mobile">
+        </div>
+        <div>
+          <label for="city">City</label>
+          <input type="text" name="city" id="city">
+        </div>
+        <div>
+          <label for="state">State</label>
+          <input type="text" name="state" id="state">
+        </div>
+        <div>
+          <label for="country">Country</label>
+          <input type="text" name="country" id="country">
+        </div>
+        <br><br>
+        <input type="submit" value="Create User">
+      </div>
+    </form>
+  </div>
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "b8d22e85-9e9e-4f70-95d6-80ab7e13ff38", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "449aa6ec-8234-4b72-8c69-6858f9e7d1ac", // The ID of your service instance.
+      onLoad: function (instance) { instance.render(); }
+    };
+    setTimeout(function () {
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+
+</html>

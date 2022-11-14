@@ -1,0 +1,12 @@
+.tick {
+    width: 256px;
+    height: 256px;
+}
+
+.container{
+    height: 80vh;
+}
+
+.jumbotron{
+    height: 15vh;
+}
