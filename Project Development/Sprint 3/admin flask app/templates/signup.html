@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}
+{{title}}
+{% endblock title %}
+
+{% block content %}
+
+<div class="heading">
+    <div class="page-head text-center">
+        <h1>Sign Up</h1>
+    </div>
+</div>
+<div class="form main_form">
+    <form method="POST">
+        <table>
+            <tr>
+                <td><label>Username:</label></td>
+                <td><input type="text" name="username" id="username" placeholder="Enter your username" required></td>
+            </tr>
+            <tr>
+                <td><label>Roll No:</label></td>
+                <td><input type="text" name="rollno" id="rollno" placeholder="Enter your roll no" required></td>
+            </tr>
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input type="email" name="email" id="email" placeholder="Enter your email id" required></td>
+            </tr>
+            <tr>
+                <td><label>Password:</label></td>
+                <td><input type="password" name="password" id="password" placeholder="Enter your password" required>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td  colspan=2 class="mx-auto"><input class="but1" type="reset" id="button" value="Reset">
+                <input class="but1" type="submit" id="button" value="Submit"></td>
+            </tr>
+            <tr>
+            
+                <td><label>Already Existing User?</label></td>
+                <td><label><a href="signin" style="color:yellow;">Sign In</a></label></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+</html>
+{% endblock content %}

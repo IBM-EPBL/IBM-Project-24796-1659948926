@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}
+{{title}}
+{% endblock title %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="heading">
+        <div class="page-logo">
+        </div>
+        <div class="page-head text-center">
+            <h1>Sign In</h1>
+        </div>
+    </div>
+    <div class="form main_form text-center">
+        <form method="POST">
+            {% if error %}
+            <label style="color:red;">{{error}}</label>
+            {% endif %}
+            <table>
+                <tr>
+                    <td><label>Email:</label></td>
+                    <td><input type="email" name="email" id="email" placeholder="Enter your email id" required></td>
+                </tr>
+                <tr>
+                    <td><label>Password:</label></td>
+                    <td><input type="password" name="password" id="password" placeholder="Enter your password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input class="but1" type="submit" id="button" value="Submit"><input class="but1" type="reset" id="button" value="Reset"></td>
+                </tr>
+                <tr>
+                    <td><label>New User?</label></td>
+                    <td><label><a href="signup" style="color:yellow;">Sign Up</a></label></td>
+                </tr>
+            </table>
+        </form>
+</body>
+
+</html>
+{% endblock content %}

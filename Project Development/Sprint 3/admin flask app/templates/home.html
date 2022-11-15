@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+{{title}}
+{% endblock title %}
+
+{% block content %}
+<div class="flcontainer">
+    <div>
+        <h1>
+            {% if success %}
+            <span style="color:green">{{success}}</span> <br>
+            {% endif %}
+            Hello There! <br>
+            Welcome to the Home Page <br>
+            {{success}}
+        </h1>
+    </div>
+</div>
+
+</html>
+{% endblock content %}
