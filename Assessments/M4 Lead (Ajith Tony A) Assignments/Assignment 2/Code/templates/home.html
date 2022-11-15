@@ -1,27 +1,21 @@
-{% extends "base.html" %}
-
-{% block docname %}
-
-<title> Home </title>
-
-{%endblock %}
+{% extends 'base.html' %}
+{% block title %}
+{{title}}
+{% endblock title %}
 
 {% block content %}
-<div class="form">
-    <h1>
-        <label>
+<div class="flcontainer">
+    <div>
+        <h1>
             {% if success %}
             <span style="color:green">{{success}}</span> <br>
             {% endif %}
             Hello There! <br>
             Welcome to the Home Page <br>
-            {{succ}}
-        </label>
-    </h1>
-    <img src="https://previews.123rf.com/images/jimbrow/jimbrow2102/jimbrow210200456/164245839-welcome-big-word-with-small-people-vector-illustration-concept-template-white-background-isolated-ca.jpg"
-        height="300" width="600" />
+            {{success}}
+        </h1>
+    </div>
 </div>
-</body>
 
 </html>
 {% endblock content %}

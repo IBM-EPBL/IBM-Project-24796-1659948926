@@ -1,21 +1,16 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% block title %}
+{{title}}
+{% endblock title %}
 
-{% block docname %}
+{% block content %}
 
-<title> Registration </title>
-
-{%endblock %}
-
-{% block body %}
 <div class="heading">
-    <div class="page-logo">
-        <img src="../static/form_icon.png" height="100px" width="100px" />
-    </div>
-    <div class="page-head">
+    <div class="page-head text-center">
         <h1>Sign Up</h1>
     </div>
 </div>
-<div class="form">
+<div class="form main_form">
     <form method="POST">
         <table>
             <tr>
@@ -36,14 +31,19 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="reset" id="button" value="Reset"></td>
-                <td><input type="submit" id="button" value="Submit"></td>
+                <td></td>
+                <td  colspan=2 class="mx-auto"><input class="but1" type="reset" id="button" value="Reset">
+                <input class="but1" type="submit" id="button" value="Submit"></td>
             </tr>
             <tr>
-                <td><label>Adready Existing User?</label></td>
+            
+                <td><label>Already Existing User?</label></td>
                 <td><label><a href="signin" style="color:yellow;">Sign In</a></label></td>
             </tr>
         </table>
     </form>
 </div>
-{% endblock %}
+
+
+</html>
+{% endblock content %}
