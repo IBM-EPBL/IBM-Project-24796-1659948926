@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<body class="text-center">
+    {% if error %}
+    <script>
+        alert("You already have an account. Please use it to login!");
+    </script>
+    {% endif %}
+    <nav class="navbar navbar-light bg-light">
+        <div class="d-flex align-items-center">
+            <img class="navbar-icon d-inline-block align-middle mx-1"
+                src="https://cdn-icons-png.flaticon.com/512/7902/7902257.png" alt="contrack logo">
+            <div class="text-dark ml-2" style="font-size: 32px;"> Contrack </div>
+        </div>
+        <button type="button" class="btn btn-primary logout"><a style="color: white;" href={{url_for("login")}}> Log In
+            </a></button>
+    </nav>
+
+    <div class="main d-flex align-items-center">
+        <form class="form-login d-flex-column justify-content-center" method="POST" action="/signup">
+            <img class="main-logo" src="https://cdn-icons-png.flaticon.com/512/7730/7730204.png"
+                alt="containment image">
+            <h2 class="h3 mt-4 mb-3">Sign Up to create an account with us</h2>
+            <div class="msg">{{ msg }}</div>
+            <label for="name" class="sr-only">Email address</label>
+            <input type="text" name="name" class="form-control" placeholder="Name" required autofocus />
+            <label for="email" class="sr-only">Email address</label>
+            <input type="email" name="email" class="form-control" placeholder="Email address" required />
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Password" required />
+            <button type="submit" class="btn btn-lg btn-primary btn-block mt-4">
+                Signup
+            </button>
+            <a style="color: white;" href={{url_for("login")}}>Already have an account? Login Here!</a>
+        </form>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+{% endblock %}
+
+
+</html>
+
+
+<img src="https://cdn-icons-png.flaticon.com/512/4329/4329979.png" height="30px" width="30px"><br>

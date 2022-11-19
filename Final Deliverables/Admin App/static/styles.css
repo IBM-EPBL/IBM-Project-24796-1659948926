@@ -1,0 +1,66 @@
+.main-logo {
+  height: 200px;
+  width: 200px;
+}
+
+.navbar-icon {
+  height: 60px;
+  width: 60px;
+}
+
+.navbar-brand{
+  height: 50px;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, #31087b, #fa2fb5);
+  background-attachment: fixed;
+  font-family: 'Barlow', sans-serif;
+  font-size: 20px;
+  color: white;
+  height: 100vh;
+}
+
+input, .btn, .form-control, .form-login {
+  border-radius: 20px;
+  border-style: none;
+  margin: 1rem auto 1rem auto;
+  padding: 12px;
+  height: max-content;
+  text-align: center;
+  width: 50%;
+}
+
+.logout{
+  width: 100px;
+  color: white;
+  margin: 0 0 0 auto;
+}
+
+input:focus {
+  padding: 12px;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #fa2eb6;
+  color: white;
+}
+ .main{
+  height: 100vh;
+ }
+
+ .container{
+  padding: 0;
+ }
+ 
+ .coords{
+  width: 100%;
+ }
+
+ .table {
+  color: white;
+  text-align: center;
+ }
+
+ .navbar, .navbar-light {
+  height: max-content;
+ }
