@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand align-middle mt-3 mb-3" href="#" style="font-size:30px;">
+            <img class="navbar-icon d-inline-block align-middle"
+                src="https://cdn-icons-png.flaticon.com/512/7902/7902257.png" alt="contrack logo">
+            Contrack
+        </a>
+        <button type="button" class="btn btn-primary logout"><a style="color: white;" href={{url_for("logout")}}>Log
+                Out</a></button>
+    </nav>
+
+
+    <h1 class="mt-3 ml-3">Location data and Visited People</h1>
+
+
+    <div class="m-4 container d-flex mx-auto">
+        <table class="table justify-content-center align-middle">
+            <thead>
+                <tr>
+                    <th class="align-middle" scope="col">S.No</th>
+                    <th class="align-middle" scope="col">Latitude</th>
+                    <th class="align-middle" scope="col">Longitude</th>
+                    <th class="align-middle" scope="col">No Visited</th>
+                    <th class="align-middle" scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {%- for row in responses %}
+                <tr>
+                    <th class="align-middle" scope="row">{{loop.index}}</th>
+                    <td class="align-middle">{{row[0]}}</td>
+                    <td class="align-middle">{{row[1]}}</td>
+                    <td class="align-middle">{{row[2]}}</td>
+                    <td class="align-middle"><button class="btn btn-danger">Delete</button></td>
+                </tr>
+                {%- endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="col-12 row m-auto align-items-center">
+        <button type="button"  class="btn btn-danger col-3  "><a style="color: white;" href="{{url_for('home')}}">Go to location update
+                Page</a></button>
+    </div>
+
+</body>
+
+{% endblock body %}
+
+
+</html>
