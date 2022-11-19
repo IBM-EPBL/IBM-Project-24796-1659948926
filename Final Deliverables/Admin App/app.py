@@ -111,8 +111,6 @@ def data():
     print(finaldata)
     return render_template('data.html', responses=finaldata)
 
-# chechk this function for errors
-
 
 @app.route("/android_sign_up", methods=["POST"])
 def upload():
