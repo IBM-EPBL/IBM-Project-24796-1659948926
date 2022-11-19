@@ -1,0 +1,9 @@
+FROM python:3.10.7
+WORKDIR /app
+ADD . /app
+ENV STATIC_URL /static
+COPY requirements.txt /app
+RUN python3 -m pip install -r requirements.txt
+RUN python3 -m pip install ibm_db
+EXPOSE 5000
+CMD ["python","app.py"]
