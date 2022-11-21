@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: contrack-service
+spec:
+  selector: 
+    app: contrack
+  ports:
+  - port: 5000
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contrack-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: contrack
+  template:
+    metadata:
+      labels:
+        app: contrack
+    spec:
+      containers:
+      - name: contrack
+        image: icr.io/ajithnamespace/repo2@sha256:3537211a082462e97889f13a9c01907c4483da23a257b05a6b230f4a92e78f7a
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
